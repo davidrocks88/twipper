@@ -11,9 +11,12 @@ class TweetsController < ApplicationController
 
 		@tweet = Tweet.new(tweet_params)
 		@tweet.user = current_user
-		@tweet.save
+		if @tweet.save
 		#@tweet = Tweet.create(tweet_params)
-		flash[:success] = "Yep."
+			flash[:success] = "You tweeted!."
+		else
+			flash[:danger] = "FIX PROBLEMS BELOW"
+		end
 		@tweets = current_user.tweets
 		render 'new'
 	end
