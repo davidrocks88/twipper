@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-default " role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -25,8 +25,9 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <% if user_signed_in? %>
-        <li class="btn-group btn-group-lg" role="group" aria-label="...">
+        <li class="btn-group" role="group" aria-label="...">
           <button type="button" class="btn btn-default"><%= link_to "New Tweet? It's Time To Be Basic!", new_tweet_path %></button>
+          <button type="button" class="btn btn-default"><%= link_to "News Feed", tweets_path %></button>
         </li>
         <% end %>
         <% if !user_signed_in? %>
@@ -37,10 +38,11 @@
         <%= link_to "Sign In, Old Friend", new_user_session_path %>
         </li>   -->
 
-        <li class="btn-group btn-group-lg" role="group" aria-label="...">
+        <li class="btn-group" role="group" aria-label="...">
         <button type="button" class="btn btn-default"><%= link_to "Sign In, Old Friend", new_user_session_path %></button>
         <button type="button" class="btn btn-default"><%= link_to "Sign Up, Be A New Solution", new_user_registration_path %></button>
         </li>
+
         <% end %>
       </ul>
 
