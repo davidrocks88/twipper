@@ -1,5 +1,9 @@
 class ProfilesController < ApplicationController
 		def new
+			
+			if current_user.profile
+				redirect_to profile_path(current_user.profile)
+			end
 			@profile = Profile.new
 		end
 
@@ -8,14 +12,11 @@ class ProfilesController < ApplicationController
 			@profile.user = current_user
 			if @profile.save
 				flash[:success] = "Profile Successfully Created"
-				redirect_to profile_path(current_user)
+				redirect_to profile_path(current_user.profile)
 			else
 				flash.now[:danger] = "Please fix erros below"
 				render 'new'
 			end
-
-
-
 		end
 
 		def show
@@ -25,4 +26,6 @@ class ProfilesController < ApplicationController
 		def profile_params
 			params.require(:profile).permit(:description, :pic)
 		end
+
+
 end

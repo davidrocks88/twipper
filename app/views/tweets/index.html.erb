@@ -3,7 +3,7 @@
 	<ul class="list-group">
 		<% @tweets.each do |tweet| %>
 			<div class="list-group-item">
-				<%= tweet.user.email %>: "<%= tweet.tweet %>"
+				<%= tweet.user.email %>:<br> "<%= tweet.tweet %>"
 			</div>
 
 		<% end %>

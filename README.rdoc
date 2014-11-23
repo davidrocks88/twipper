@@ -33,3 +33,4 @@ Lines Added by me:
 CSS:
 	//line 5313 - .panel-primary margin-right 750px
 	line 5063 - .panel - margin 60em
+	line 31110 - padding was originally 16px, font was 18px, lineheight was 1.33
