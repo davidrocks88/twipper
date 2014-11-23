@@ -49,3 +49,4 @@ end
 gem 'simple_form'
 gem 'devise'
 gem 'carrierwave'
+gem 'twitter-text', '~> 1.10.0'

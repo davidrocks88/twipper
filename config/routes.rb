@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   resources :tweets
 
   resources :profiles
+
+  resources :relationships
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

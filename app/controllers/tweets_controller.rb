@@ -23,6 +23,7 @@ class TweetsController < ApplicationController
 
 	def index
 		@tweets = Tweet.all.reject {|tweet| tweet.user == current_user}
+		@relationship = Relationship.new
 	end
 
 

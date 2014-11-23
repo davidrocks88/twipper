@@ -1,7 +1,16 @@
-New profile form
+<div class="jumbotron">
+  <div class="container">
+    <h1>
+    	Time to make a profile!
+	</h1>
+	<p>
+		<h2>
+		<%= simple_form_for @profile do |f| %>
+			<%= f.input :description %></h2>
+			<%= f.input :pic %>
+			<%= f.button :submit %>
+		<% end %>
 
-<%= simple_form_for @profile do |f| %>
-	<%= f.input :description %>
-	<%= f.input :pic %>
-	<%= f.button :submit %>
-<% end %>
+	</p>
+  </div>
+</div>

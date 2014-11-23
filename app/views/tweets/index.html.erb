@@ -2,8 +2,23 @@
 	<div class="panel-heading"><h3 class="panel-title">News Feed</h3></div>
 	<ul class="list-group">
 		<% @tweets.each do |tweet| %>
+
 			<div class="list-group-item">
+				<div class="col-md-10">
 				<%= tweet.user.email %>:<br> "<%= tweet.tweet %>"
+				</div>
+
+				<% if current_user.following?(tweet.user) %>
+					<%= simple_form_for(@relationship, :method => :delete, :url => relationship_path(tweet.user.id)) do |f| %>
+					<%= f.input :followed_id, as: :hidden, input_html: { value: tweet.user.id } %>
+						<%= f.button :submit, "Unfollow", class: "btn btn-primary" %> 
+					<% end %>
+				<% else %>
+					<%= simple_form_for @relationship do |f| %>
+					<%= f.input :followed_id, as: :hidden, input_html: { value: tweet.user.id } %>
+						<%= f.button :submit, "Follow", class: "btn btn-default" %> 
+					<% end %>
+				<% end %>
 			</div>
 
 		<% end %>

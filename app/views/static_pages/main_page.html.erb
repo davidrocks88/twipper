@@ -1,21 +1,21 @@
 <div class="jumbotron">
-  <div class="container">
-    <h1>
-    	Welcome to Twipper!
-	</h1>
-	<p>
-		We here at Twipper (patent pending) believe in freedom of expression, open source, and good pasta. Enjoy the site!
-	</p>
-	<p>
-		<% if !user_signed_in? %>
-		<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-default btn-lg" %>
-		<%= link_to "Log In", new_user_session_path, class: "btn btn-default btn-lg" %>
-		<% else %>
-		<%= link_to "New Tweet", new_tweet_path, class: "btn btn-default btn-lg" %>
-		<%= link_to "Newsfeed", tweets_path, class: "btn btn-default btn-lg" %>
-		<% end %>
+	<div class="container">
+    	<h1>
+    		Welcome to Twipper!
+		</h1>
+		<p>
+			We here at Twipper (patent pending) believe in freedom of expression, open source, and good pasta. Enjoy the site!
+		</p>
+		<p>
+			<% if !user_signed_in? %>
+			<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-default btn-lg" %>
+			<%= link_to "Log In", new_user_session_path, class: "btn btn-default btn-lg" %>
+			<% else %>
+			<%= link_to "New Tweet", new_tweet_path, class: "btn btn-default btn-lg" %>
+			<%= link_to "Newsfeed", tweets_path, class: "btn btn-default btn-lg" %>
+			<% end %>
+		</p>
+  	</div>
+</div>
 
-	</p>
-</div>
-    </div>
-</div>
+<img src="http://image.slidesharecdn.com/10badassaynrandquotes-140517205355-phpapp02/95/10-badass-ayn-rand-quotes-7-638.jpg?cb=1400424596", style="width:50em;">
