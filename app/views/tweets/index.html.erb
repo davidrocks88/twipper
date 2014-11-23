@@ -1,15 +1,13 @@
-NewsFeed:
+<div class="panel panel-primary">
+	<div class="panel-heading"><h3 class="panel-title">News Feed</h3></div>
+	<ul class="list-group">
+		<% @tweets.each do |tweet| %>
+			<div class="list-group-item">
+				<%= tweet.user.email %>: "<%= tweet.tweet %>"
+			</div>
 
-		<div class="panel panel-default">
-<div class="panel-heading"><h3 class="panel-title">News Feed</h3></div>
-<ul class="list-group">
-	<% @tweets.each do |tweet| %>
-
-  		<div class="list-group-item">
-		<%= tweet.user.email %>: "<%= tweet.tweet %>"
-		</div>
-
-	<% end %>
-</ul>
-	</div>	</div>
+		<% end %>
+		</ul>
+	</div>
+</div>
 

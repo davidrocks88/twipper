@@ -1,3 +1,18 @@
+<div class="jumbotron">
+  <div class="container">
+    <h1>
+    	Welcome to Twipper!
+	</h1>
+	<p>
+		We here at Twipper (patent pending) believe in freedom of expression, open source, and good pasta. Enjoy the site!
+	</p>
+	<p>
+		<% if !user_signed_in? %>
+		<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-default btn-lg" %>
+		<%= link_to "Log In", new_user_session_path, class: "btn btn-default btn-lg" %>
+		<% end %>
 
-<strong>Hey marc, ben, dad, and mom. See you soon! love, david. Also, ben probably smells funny. blame marc. thanks mom!</strong>
-<%= @variable %>
+	</p>
+</div>
+    </div>
+</div>
