@@ -26,10 +26,6 @@
         <% if user_signed_in? %>
          <li><%= link_to "New Tweet? It's Time To Be Basic!", new_tweet_path %></li>
          <li><%= link_to "News Feed", tweets_path %></button></li>
-        <!-- <li class="btn-group" role="group" aria-label="...">
-          <button type="button" class="btn btn-default"><%= link_to "New Tweet? It's Time To Be Basic!", new_tweet_path %></button>
-          <button type="button" class="btn btn-default"><%= link_to "News Feed", tweets_path %></button>
-        </li> -->
         <% end %>
         <% if !user_signed_in? %>
         <li>
@@ -82,12 +78,9 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-
   <% flash.each do |key, value| %>
     <div class="alert alert-<%=key %>"><%=value %></div>
   <% end %>
-
 <%= yield %>
-
 </body>
 </html>

@@ -5,7 +5,7 @@
 
 			<div class="list-group-item">
 				<div class="col-md-10">
-				<%= tweet.user.email %>:<br> "<%= tweet.tweet %>"
+				<%= tweet.user.email %><br> "<%= tweet.tweet %>"
 				</div>
 
 				<% if current_user.following?(tweet.user) %>
