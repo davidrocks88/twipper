@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 
   root 'static_pages#main_page'
-
+  get 'about_page' => 'static_pages#about_page'
+  get 'lindsay' => 'static_pages#lindsay'
   resources :tweets
 
   resources :profiles
